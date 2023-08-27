@@ -22,16 +22,11 @@ const port = 8080;
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("Hola viejo");
+  res.end("The API is working on /api/noticias");
 });
 
 app.get("/api/noticias", (req, res) => {
-  const objetos = [
-    { id: 1, nombre: "Objeto 11111111" },
-    { id: 2, nombre: "Objeto 2" },
-    { id: 3, nombre: "Objeto 3" },
-  ];
-
+  const objetos = loadData();
   res.json(objetos);
 });
 
