@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/noticias", (req, res) => {
   const objetos = [
-    { id: 1, nombre: "Objeto 1" },
+    { id: 1, nombre: "Objeto 11111111" },
     { id: 2, nombre: "Objeto 2" },
     { id: 3, nombre: "Objeto 3" },
   ];
