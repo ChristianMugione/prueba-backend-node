@@ -1,19 +1,14 @@
-// Importa el módulo 'http' incorporado de Node.js
-const http = require("http");
+const express = require("express");
 
-// Crea un servidor HTTP
-const server = http.createServer((req, res) => {
-  // Configura la respuesta HTTP con el estado 200 (OK) y el tipo de contenido
-  res.writeHead(200, { "Content-Type": "text/plain" });
+const app = express();
+const port = process.env.port || 3000;
 
-  // Escribe "Hola Mundo" en la respuesta
-  res.end("Hola Mundo\n");
+app.get("/", (req, res) => {
+  res.send("Hola viejo");
 });
 
-// Escucha en el puerto 3000
-server.listen(8080, () => {
-  console.log("Servidor escuchando en http://localhost:3000/");
-});
+app.listen(port);
+console.log("Server listen port", port);
 
 // const express = require("express");
 // const app = express();
