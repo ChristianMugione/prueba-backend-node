@@ -216,7 +216,7 @@ const loadData = () => {
   }
 };
 
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 
 app.get("/api/noticias", (req, res) => {
   const objetos = loadData();
