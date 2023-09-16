@@ -1,12 +1,13 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const bcrypt = require("bcrypt");
-const jwt = require("jsonwebtoken");
-const { check, validationResult } = require("express-validator");
 const fs = require("fs");
 const cors = require("cors");
 const database = "db.json";
 const { Client } = require("pg");
+
+//const bodyParser = require("body-parser");
+//const bcrypt = require("bcrypt");
+//const jwt = require("jsonwebtoken");
+//const { check, validationResult } = require("express-validator");
 
 const app = express();
 app.use(cors());
